@@ -1,0 +1,503 @@
+/* 1366 x 768 */
+/* Snippet pour les préfixes de box-sizing  */
+
+*{
+    box-sizing: border-box; /* Opera/IE 8+ */
+    -moz-box-sizing: border-box; /* Firefox, autres Gecko */
+    -webkit-box-sizing: border-box; /* Safari/Chrome, autres WebKit */
+    padding: 0;
+    margin: 0;
+    list-style:none ;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+ }
+ 
+ 
+ /***************************************************************************************/
+ /*                                     Desktop                                         */
+ /***************************************************************************************/
+ /* marge body */
+ body
+ {
+    margin:0px;
+    /* margin:10px; */
+ }
+ 
+ /*---------------------------------------       debut spin loader */
+ /* section main */
+ main
+ {
+    animation-name: main_opacity;
+    animation-duration:4200ms;
+    animation-iteration-count:1;
+ }
+ /* animation pour ne pas afficher la section main pendant l'execution du spin loader 4 sec */
+ @keyframes main_opacity {
+    0% { opacity: 0; }
+    99%{opacity: 0;}
+    100% { opacity: 1; }
+ }
+ 
+ /* spin loader */
+ .loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border-top: 16px solid #9356DC;
+    border-left: 16px solid #9356DC;
+    border-bottom: 16px solid #9356DC;
+    border-right: 16px solid  #9356DC;
+    background-color: #99E2D0;
+    animation: spin 4s linear ;
+    visibility: hidden;
+ }
+ 
+ /* icone couvert spin loader */
+ .loader i{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #9356DC;
+    font-size: 30px;
+ }
+ 
+ 
+ @-webkit-keyframes spin {
+    0% { transform:translate(-50%, -50%) rotate(0deg);visibility:visible}
+    100% {  transform:translate(-50%, -50%)  rotate(1440deg); }
+ }
+ 
+ /* animation spin loader */
+ @keyframes spin {
+    0% { transform:translate(-50%, -50%) rotate(0deg);visibility:visible}
+    100% {  transform:translate(-50%, -50%)  rotate(1440deg); }
+ }
+ 
+ /*------------------------------------------------------- debut section header */
+ header {
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+ }
+ 
+ /* logo */
+ header #logo
+ {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    /* padding-top: 30px;
+    padding-bottom: 30px; */
+ }
+ 
+ header #logo img {
+    /* width: 200px; */
+    width: 150px;
+ }
+ 
+ /* centrage logo */
+ header div img
+ {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 15px;
+    padding-top: 15px;
+ }
+ 
+ /* section localisation */
+ .localisation {
+    width: 100%;
+    background-color: #eaeaea;
+    text-align: center;
+    padding: 15px 0 15px 0;
+    font-weight: 700;
+    box-shadow: inset 0px 2px 5px 0px #c4c3c0;
+ }
+ .localisation__icon {
+    margin-right: 15px;
+ }
+ 
+ .localisation__text {
+    display: inline-block;
+ }
+ 
+ /*---------------------------------------- bouton navigation decouverte restaurants */
+ .container_header_text_button{
+    width: 100%;
+    display:flex ;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+    background-color:#f2f2f2;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    row-gap: 15px;
+ }
+ 
+ .btn_nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+    height: 40px;
+    border-radius: 20px;
+    box-shadow: 3px 3px 5px  #999;
+    color: white;
+    background-image: linear-gradient(to bottom right, #FF79DA  0%, #d36bda 51%, #9356DC 100%)
+ }
+ 
+ .btn_nav:hover{
+    filter: brightness(1.1);
+    box-shadow: 3px 3px 5px  rgb(80, 80, 80);
+ }
+ 
+ /* procedure a suivre pour commander */
+ .fonctionnements
+ {
+    width: auto;
+    display:flex ;
+    flex-direction: column;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    gap:60px;
+    align-items: center ;
+    row-gap: 15px;
+    padding: 15px;
+ }
+ #title_fonctionnement{
+    
+    margin-left: -50%;
+ }
+ 
+ .numéro{
+    color: white;
+    background-color: #9356DC;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    padding-left: 5px;
+    margin-left:-10px;
+ }
+ 
+ .fonctionnement
+ {
+    width: 300px;
+    display:flex ;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+    background-color: #f2f2f2;
+    height: 60px;
+    border: 1px solid #d9d9d9;
+    border-radius: 20px;
+ }
+ 
+ /*--------------------------------------------- debut section liste flyers restaurants */
+ 
+ .liste_restaurants
+ {
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    background-color: #f2f2f2;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    row-gap: 30px;
+ }
+ 
+ .les_flyers_restaurants
+ {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    row-gap: 20px; 
+    column-gap: 0; 
+ }
+ 
+ /* debut carte/flyer restaurant */
+ .card {
+    width: 100%; 
+    height: auto;
+    background-color: white; /*3*/
+    box-shadow: 0px 2px 5px #999; /*4*/
+    border-radius: 20px;
+ }
+ .card a { 
+    color: black;
+    text-decoration: none;
+ }
+ 
+ .card-image {
+    height: 150px;/*1*/
+    position: relative;/*2*/
+    overflow: hidden;/*3*/
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border: 3px solid white;
+    
+ }
+ .card-image img {
+    width: 150%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+ }
+ 
+ /* stick nouveau restaurant */
+ .stick_img{
+    z-index : 2;
+    position:absolute;
+    width: auto;
+    border-radius: 2px;
+    background-color: #99E2D0;
+    color:#008766;
+    left:73%;
+    top:10%;
+ }
+ 
+ /* debut corps du flyer */
+ .card-body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align:justify;  /*1*/
+    padding: 10px 20px; 
+ }
+ /* nom du restaurant */
+ .card-title {
+    text-align:justify;
+    padding-bottom: 5px;
+    font-weight: bold;
+ }
+ /* localisation du restaurant */
+ .card-geolocalisation {
+    padding-bottom: 5px;
+ }
+ 
+ .heart
+ {
+    color:grey;
+    font-size: 30px;
+ }
+ 
+ .heart:hover {
+    animation: fill 1s ease-out;
+    background: linear-gradient(#FF79DA, #9356DC);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    font-weight: bold;
+ }
+ 
+ @keyframes fill {
+    0% {
+       opacity: 0;
+    }
+    100% {
+       opacity: 1;
+    }
+ }
+ 
+ 
+ 
+ /*
+ ==========================================================================================
+ Section footer
+ ==========================================================================================
+ */
+ 
+ .footer__logo {
+    font-size: 24px;
+    font-family: "Shrikhand", sans-serif;
+    color: white;
+    margin-bottom: 15px;
+ }
+ 
+ footer p
+ {
+    display: inline;
+ }
+ 
+ footer i{
+    margin-right: 10px;
+    color:white;
+ }
+ .footercols
+ {
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: #353535;
+    gap: 20px;   
+    padding: 30px;
+ }
+ 
+ .footercols a{
+    color:white;
+ }
+ 
+ .footercols h3 a {
+    color:white;
+ }
+ 
+ /*
+ ==========================================================================================
+ Desktop
+ ==========================================================================================
+ */
+ @media screen and (min-width: 992px)
+ {
+    /*----------------------------------------------------- debut section body */
+    body
+    {
+       margin:10px;
+    }
+    
+    /* logo */
+    header #logo
+    {
+       
+       padding-bottom: 10px;
+    }
+    
+    header #logo img {
+       width: 200px;
+    }
+    
+    /* procedure a suivre pour commander */
+    .fonctionnements
+    {
+       width: auto;
+       display:flex ;
+       flex-direction: row;
+       padding-top: 30px;
+       padding-bottom: 30px;
+       gap:60px;
+       align-items: center ;
+       padding-left: 30px;
+    }
+    
+    .fonctionnement
+    {
+       display:flex ;
+       width: 300px;
+       align-items: center;
+       gap: 15px;
+       background-color: #f2f2f2;
+       height: 60px;
+       border-radius: 20px;
+    }
+ 
+    #title_fonctionnement{
+    
+       margin-left: 0;
+    }
+    
+    /*--------------------------------------------- debut section liste flyers restaurants */
+    
+    .liste_restaurants
+    {
+       width:100%;
+       display: flex;
+       flex-direction: column;
+       justify-content:flex-start;
+       background-color: #f2f2f2;
+       row-gap: 30px;
+       padding: 30px;
+    }
+    
+    .les_flyers_restaurants
+    {
+       width: 100%;
+       display: flex; 
+       flex-direction: row; 
+       justify-content:space-between;
+    }
+    
+    /* debut carte/flyer restaurant */
+    .card {
+       width: 24%; 
+       background-color: white; /*3*/
+       box-shadow: 0px 5px 20px #999; /*4*/
+       border-radius: 20px;
+    }
+    
+    /*------------------------------------------------------------ debut section footer */
+    .footercols
+    {
+       width:auto;
+       display: flex;
+       flex-direction: column;
+       justify-content: flex-start;
+       background-color: #353535;
+       row-gap: 30px;
+       padding: 30px;
+    }
+    
+ }
+ /*
+ ==========================================================================================
+ Tablette
+ ==========================================================================================
+ */
+ @media screen and (min-width: 767px) and (max-width:991px)
+ {
+    /*-------------------------------------- debut section fonctionnement */
+    .fonctionnements
+    {
+       display:flex ;
+       flex-direction: column;
+       row-gap: 30px;
+       padding-bottom: 30px;
+    }
+    .fonctionnement
+    {
+       display:flex ;
+       border: 1px solid #d9d9d9;
+       box-shadow: 3px 3px 5px  #999;
+       border-radius: 20px;
+    }
+ 
+    #title_fonctionnement{
+    
+       margin-left: 0;
+    }
+    
+    /*---------------------------------------- debut flyer restaurant -- */
+    .les_flyers_restaurants
+    {
+       width: 100%;
+       display: flex; 
+       flex-direction: row; 
+       flex-wrap: wrap;
+       justify-content:space-between;
+       row-gap: 30px;
+    }
+    .card {
+       width: 48%;
+       background-color: white; /*3*/
+       box-shadow: 0px 5px 20px #999; /*4*/
+       border-radius: 20px;
+    }
+    
+    /*------------------------------------- debut section footer */
+    /* .footercols
+    {
+       gap:20%;
+    } */
+ }
+ 
+
