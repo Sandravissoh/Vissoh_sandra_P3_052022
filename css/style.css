@@ -223,10 +223,28 @@ header div img
 }
 
 .heart
-{
-   color:grey;
-   font-size: 30px;
-}
+ {
+    color:grey;
+    font-size: 30px;
+ }
+ 
+ .heart:hover {
+    animation: fill 1s ease-out;
+    background: linear-gradient(#FF79DA, #9356DC);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    font-weight: bold;
+ }
+ 
+ @keyframes fill {
+    0% {
+       opacity: 0;
+    }
+    100% {
+       opacity: 1;
+    }
+ }
 /*
 ==========================================================================================
 Section footer

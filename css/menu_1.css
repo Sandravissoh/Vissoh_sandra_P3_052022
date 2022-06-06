@@ -8,6 +8,15 @@
     text-decoration: none;
     font-family: 'Roboto', sans-serif;
  }
+ @keyframes appear {
+    0% {
+       transform: translateY(30px);
+    }
+    100% {
+       transform: translateY(0px);
+    }
+ }
+ 
  
  /*----------------------------------------------------- debut section body */
  .body
@@ -87,6 +96,7 @@
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
     top: 220px;
+    font-style: italic;
  }
  
  .heart
@@ -114,7 +124,7 @@
  }
  
  
- /*----------------------------section menu entrees - plats desserts */
+ /*----------------------------section menu- entrees plats desserts */
  .card-menu-text
  {
     display: flex;
@@ -159,9 +169,9 @@
     overflow: hidden;
     box-shadow: 2px 2px 10px #c4c3c0;
     animation: appear 0.5s;
-    animation-timing-function: cubic-bezier(0.57, -0.3, 0.36, 1.2);
-    transform: scale(0);
-    animation-fill-mode: both;
+    animation-timing-function: ease-in-out;
+    transform: translateY(0);
+   
  }
  .dishes__card__txt {
     width: 90%;
@@ -169,11 +179,7 @@
     overflow: hidden;
     text-overflow: ellipsis;
  }
- .dishes__card__txt--over {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
- }
+ 
  .dishes__card__price {
     margin-left: 10px;
  }
@@ -207,30 +213,15 @@
     opacity: 1;
     transform: rotate(-360deg);
  }
- 
- 
- 
- @keyframes appear {
-    0% {
-       transform: scale(0);
-    }
-    100% {
-       transform: scale(1);
-    }
- }
  .delay1 {
-    animation-delay: 0.1s;
- }
- 
- .delay2 {
     animation-delay: 0.3s;
  }
  
- .delay3 {
+ .delay2 {
     animation-delay: 0.6s;
  }
  
- .delay4 {
+ .delay3 {
     animation-delay: 0.9s;
  }
  
@@ -265,6 +256,7 @@
     filter: brightness(1.1);
     box-shadow: 3px 3px 5px  rgb(80, 80, 80);
  }
+ 
  
  
  /*
