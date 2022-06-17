@@ -179,6 +179,11 @@
     overflow: hidden;
     text-overflow: ellipsis;
  }
+ .dishes__card__txt--over {
+   white-space: nowrap;
+   overflow: hidden;
+   text-overflow: ellipsis;
+}
  
  .dishes__card__price {
     margin-left: 10px;
