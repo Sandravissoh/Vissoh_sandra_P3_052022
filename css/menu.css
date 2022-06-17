@@ -262,7 +262,20 @@
     box-shadow: 3px 3px 5px  rgb(80, 80, 80);
  }
  
- 
+ .btn_nav{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 250px;
+   height: 40px;
+   border-radius: 20px;
+   box-shadow: 3px 3px 5px  #999;
+   color: white;
+ }
+ .btn_nav:hover{
+   filter: brightness(1.1);
+   box-shadow: 3px 3px 5px  rgb(80, 80, 80);
+}
  
  /*
  ==========================================================================================
