@@ -170,9 +170,11 @@
     box-shadow: 2px 2px 10px #c4c3c0;
     animation: appear 0.5s;
     animation-timing-function: ease-in-out;
-    transform: translateY(0);
-   
+    transform: translateY(0);  
  }
+ .dishes__card:hover{
+   cursor: pointer;
+    }
  .dishes__card__txt {
     width: 90%;
     white-space: nowrap;
@@ -206,7 +208,7 @@
  .dishes__card:hover :nth-child(3) {
     opacity: 1;
     margin-right: 0px;
-    
+    cursor: pointer;
  }
  
  .check_icons
@@ -217,6 +219,7 @@
  .dishes__card:hover .check_icons {
     opacity: 1;
     transform: rotate(-360deg);
+    cursor: pointer;
  }
  .delay1 {
     animation-delay: 0.3s;
@@ -262,20 +265,7 @@
     box-shadow: 3px 3px 5px  rgb(80, 80, 80);
  }
  
- .btn_nav{
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   width: 250px;
-   height: 40px;
-   border-radius: 20px;
-   box-shadow: 3px 3px 5px  #999;
-   color: white;
- }
- .btn_nav:hover{
-   filter: brightness(1.1);
-   box-shadow: 3px 3px 5px  rgb(80, 80, 80);
-}
+ 
  
  /*
  ==========================================================================================
@@ -477,6 +467,7 @@
        margin-left: auto;
     }
  }
+ 
  
  
  
