@@ -16,16 +16,15 @@ body
    margin:0px;
 } 
 
-/************** Animate loader ***************************/
 .loader {
    width: 100px;
    height: 100px;
    border-radius: 100px;
-   border-top: 5px solid red;
-   border-left: 3px solid brown;
-   border-bottom: 1px solid purple;
+   border-top: 20px solid rgb(0, 255, 242);
+   border-left: 20px solid rgb(42, 157, 165);
+   border-bottom: 20px solid rgb(139, 132, 139);
    border-right: transparent;
-   animation: spinner 0.8s linear infinite;
+   animation: spinner 1s linear infinite;
  }
  
  @keyframes spinner {
@@ -45,7 +44,7 @@ body
  .loader-wrapper {
    width: 100vw;
    height: 100vh;
-   background-color: #242f3f;
+   background-color: white;
  
    display: flex;
    justify-content: center;
@@ -59,7 +58,7 @@ body
  /************** Animate and Hide loader wrapper ***************************/
  .loader-wrapper {
    animation: hidePreloader 2s;
-   animation-fill-mode: forwards; /* cacher animation, une fois terminée */
+   animation-fill-mode: forwards; /* cacher animation, une fois terminÃ©e */
  }
  
  @keyframes hidePreloader {
@@ -73,7 +72,6 @@ body
      visibility: hidden;
    }
  }
- 
 header {
    width:100%;
    display: flex;
